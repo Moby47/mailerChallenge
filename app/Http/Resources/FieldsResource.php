@@ -14,6 +14,14 @@ class FieldsResource extends JsonResource
      */
     public function toArray($request)
     {
-        return parent::toArray($request);
+       // return parent::toArray($request);
+      // Custom fields specifications
+       return [
+        'id' => $this->id,
+        'title' => $this->title,
+        'type' => $this->type,
+        'created_at' => $this->created_at,
+        'updated_at' => $this->updated_at,
+    ];
     }
 }
