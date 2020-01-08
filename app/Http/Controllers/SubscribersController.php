@@ -20,7 +20,7 @@ class SubscribersController extends Controller
                                    ->select('id','name','email','state','created_at')
                                    ->get();
 
-        return SubscribeRes::collection($subscribers);
+        return SubscriberRes::collection($subscribers);
     }
 
     /**
@@ -77,7 +77,7 @@ class SubscribersController extends Controller
                                   ->where('id', $id)
                                   ->get();
                                    
-         return new SubscribeRes($subscriber);
+         return new SubscriberRes($subscriber);
     }
 
     /**
