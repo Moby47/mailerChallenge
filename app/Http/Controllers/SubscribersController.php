@@ -72,10 +72,8 @@ class SubscribersController extends Controller
      */
     public function show($id)
     {
-        //View all subscribers
-        $subscriber = Subscribers::select('id','name','email','state','created_at')
-                                  ->where('id', $id)
-                                  ->get();
+        //View one subscriber
+        $subscriber = Subscribers::findorfail($id);
                                    
          return new SubscriberRes($subscriber);
     }
