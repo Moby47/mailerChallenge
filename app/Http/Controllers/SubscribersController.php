@@ -19,7 +19,7 @@ class SubscribersController extends Controller
         $subscribers = Subscribers::orderBy('id','desc')
                                    ->select('id','name','email','state','created_at')
                                    ->get();
-                                   
+
         return SubscribeRes::collection($subscribers);
     }
 
@@ -72,7 +72,12 @@ class SubscribersController extends Controller
      */
     public function show($id)
     {
-        //
+        //View all subscribers
+        $subscriber = Subscribers::select('id','name','email','state','created_at')
+                                  ->where('id', $id)
+                                  ->get();
+                                   
+         return new SubscribeRes($subscriber);
     }
 
     /**
