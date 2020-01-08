@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Subscribers;
+use App\Http\Resources\SubscribersResource as SubscriberRes;
 use Illuminate\Http\Request;
 
 class SubscribersController extends Controller
@@ -13,7 +15,12 @@ class SubscribersController extends Controller
      */
     public function index()
     {
-        //
+        //View all subscribers
+        $subscribers = Subscribers::orderBy('id','desc')
+                                   ->select('id','name','email','state','created_at')
+                                   ->get();
+                                   
+        return SubscribeRes::collection($subscribers);
     }
 
     /**
