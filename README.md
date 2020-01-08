@@ -23,14 +23,14 @@ Laravel is accessible, powerful, and provides tools required for large, robust a
 
 ## Installation 
 
-Goto laravel doc https://laravel.com/docs/5.8
-Install composer https://getcomposer.org/
-install laravel using composer global require laravel/installer in CMD
-run laravel new blog to create a fresh laravel installation in a directory you specify
-install Xampp from the official website https://www.apachefriends.org/download.html
-download and install node.js https://nodejs.org/en/download/ for Vue.js integration 
-run npm install to install all the dependencies.
-run npm install vue vuetify to instal into the node_modules folder of the project
+- Goto laravel doc https://laravel.com/docs/5.8
+- Install composer https://getcomposer.org/
+- install laravel using composer global require laravel/installer in CMD
+- run laravel new blog to create a fresh laravel installation in a directory you specify
+- install Xampp from the official website https://www.apachefriends.org/download.html
+- download and install node.js https://nodejs.org/en/download/ for Vue.js integration 
+- run npm install to install all the dependencies.
+- run npm install vue vuetify to instal into the node_modules folder of the project
 
 
 ## Learning Laravel
