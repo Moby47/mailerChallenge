@@ -22,6 +22,9 @@ import Vuetify from 'vuetify'
 import 'vuetify/dist/vuetify.min.css'
 Vue.use(Vuetify)
 
+//vue meta
+import Meta from 'vue-meta'
+Vue.use(Meta)
 /* ------------------------- Imports -------------------- */
 
 
