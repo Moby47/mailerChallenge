@@ -75,7 +75,7 @@ class SubscribersController extends Controller
         //View one subscriber
         $subscriber = Subscribers::findorfail($id);
                                    
-         return new SubscriberRes($subscriber);
+        return new SubscriberRes($subscriber);
     }
 
     /**
