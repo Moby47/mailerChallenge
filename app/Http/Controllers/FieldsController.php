@@ -121,8 +121,14 @@ class FieldsController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroyField(Request $request)
     {
-        //
+        $id = $request->input('id');
+
+        $fields = Fields::findorfail($id);
+
+        $fields->delete();
+
+        return 1;
     }
 }
