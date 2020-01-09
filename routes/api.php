@@ -19,3 +19,5 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 
 Route::apiResource('/subscribers', 'SubscribersController');
 Route::apiResource('/fields', 'FieldsController');
+//custom api route to update field
+Route::post('/update-field', 'FieldsController@updateField');

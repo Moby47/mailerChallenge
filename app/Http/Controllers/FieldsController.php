@@ -92,9 +92,27 @@ class FieldsController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function updateField(Request $request)
     {
-        //
+         // Validate the requests...
+         $validatedData = $request->validate([
+            'title' => 'required|string|max:255',
+            'type' => 'required|string|max:255',
+        ]);
+
+        // get requests...
+        $title = $request->input('title');
+        $type = $request->input('type');
+        $id = $request->input('id');
+
+        $update = Fields::findorfail($id);
+
+        $update->title = $title;
+        $update->type = $type;
+
+        $update->save();
+
+        return 1;
     }
 
     /**
