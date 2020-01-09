@@ -18,14 +18,13 @@
           link
         >
           <v-list-item-content>
-            <v-list-item-title><b ><router-link :to='link' class='text-style'>{{ text }}</router-link></b></v-list-item-title>
+            <v-list-item-title><b ><v-btn><router-link :to='link' class='text-style'>{{ text }}</router-link></v-btn></b></v-list-item-title>
           </v-list-item-content>
         </v-list-item>
       </v-list>
     </v-navigation-drawer>
   </v-card>
 </template>
-
 
 
 <script>
@@ -36,7 +35,7 @@ data: () => ({
   items: [
         ['/subscribe', 'Subscribe'],
         ['/subscribers', 'Our Subscribers'],
-      ],      
+      ]     
 }),
   
 methods: {
