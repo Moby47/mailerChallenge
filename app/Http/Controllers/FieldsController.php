@@ -15,7 +15,12 @@ class FieldsController extends Controller
      */
     public function index()
     {
-        //
+        //View all Fields
+        $Fields = Fields::orderBy('id','desc')
+                                   ->select('id','title','type','subscribers_id','created_at')
+                                   ->get();
+
+        return FieldRes::collection($Fields);
     }
 
     /**

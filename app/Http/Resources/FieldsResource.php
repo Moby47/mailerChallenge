@@ -20,8 +20,9 @@ class FieldsResource extends JsonResource
         'id' => $this->id,
         'title' => $this->title,
         'type' => $this->type,
+        'subscribers_id' => $this->subscribers_id,
         'created_at' => $this->created_at,
-        'updated_at' => $this->updated_at,
+       // 'updated_at' => $this->updated_at,
     ];
     }
 }
