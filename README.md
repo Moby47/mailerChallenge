@@ -7,6 +7,57 @@
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/license.svg" alt="License"></a>
 </p>
 
+<hr>
+
+## DOCUMENTATION
+
+<p>Click here for live project<a href='mailerchallenge.henrymoby.tech'>Demo</a> </p>
+
+## Installation 
+
+- Goto laravel doc https://laravel.com/docs/5.8
+- Install composer https://getcomposer.org/
+- install laravel using <i>composer global require laravel/installer</i> in CMD
+- run <i>laravel new blog</i> to create a fresh laravel installation in a directory you specify
+- install Xampp from the official website https://www.apachefriends.org/download.html
+- download and install node.js https://nodejs.org/en/download/ for Vue.js integration 
+- run <i>npm install</i> to install all the dependencies.
+- run npm <i>install vue vuetify</i> to install into the node_modules folder of the project
+
+## Setup
+
+- Create database (mailerDb) in php my admin
+- Change database name in your .env file to mailerDb
+- Run <i>php artisan config:clear</i> in your project directory, to clear config cache 
+- Run <i>php artisan migrate</i> in your project directory, to migrate database 
+- Run <i>php artisan db:seed --class=SubscriberTableSeeder</i> in your project directory, to create demo data <a href='https://laravel.com/docs/master/seeding'>Full documentation</a>using seeder and factory <a href='https://laravel-news.com/learn-to-use-model-factories-in-laravel-5-1'>Full documentation</a>
+- Run <i>php artisan serve</i> in your project directory, to start development on localhost:8000
+
+## Backend
+
+<p>Framework</p>
+
+- Laravel. https://laravel.com/docs
+
+<p>Controller</p>
+
+- Subscribers 
+
+- Fields 
+
+<p>Resouces</p>
+
+- Subscriber resource
+
+- Fields resource
+
+<p>API testing tool</p>
+
+- Postman. https://www.getpostman.com/downloads/
+
+<hr>
+
+
 ## About Laravel
 
 Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
@@ -20,17 +71,6 @@ Laravel is a web application framework with expressive, elegant syntax. We belie
 - [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
 
 Laravel is accessible, powerful, and provides tools required for large, robust applications.
-
-## Installation 
-
-- Goto laravel doc https://laravel.com/docs/5.8
-- Install composer https://getcomposer.org/
-- install laravel using composer global require laravel/installer in CMD
-- run laravel new blog to create a fresh laravel installation in a directory you specify
-- install Xampp from the official website https://www.apachefriends.org/download.html
-- download and install node.js https://nodejs.org/en/download/ for Vue.js integration 
-- run npm install to install all the dependencies.
-- run npm install vue vuetify to instal into the node_modules folder of the project
 
 
 ## Learning Laravel
