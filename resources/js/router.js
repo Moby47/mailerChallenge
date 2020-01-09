@@ -4,6 +4,7 @@ import Router from 'vue-router'
 Vue.use(Router)
 
 import index from './components/index.vue'
+import subscribers from './components/subscribers.vue'
 //import notfound from './components/notfound.vue'
 
 
@@ -18,7 +19,14 @@ export default new Router({
               //  auth: true
             }
         },
-        
+        {
+            path: '/subscribers',
+            name: 'subscribers',
+            component: subscribers,
+             meta:{
+              //  auth: true
+            }
+        },
        /* {
             path: '*',
             name: 'notfound',

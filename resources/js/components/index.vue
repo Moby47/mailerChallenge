@@ -18,7 +18,7 @@
           link
         >
           <v-list-item-content>
-            <v-list-item-title><b ><v-btn><router-link :to='link' class='text-style'>{{ text }}</router-link></v-btn></b></v-list-item-title>
+            <v-list-item-title><b ><v-btn color="success" ><router-link :to='link' class='text-style'>{{ text }}</router-link></v-btn></b></v-list-item-title>
           </v-list-item-content>
         </v-list-item>
       </v-list>
