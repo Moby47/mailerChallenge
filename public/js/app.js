@@ -1940,9 +1940,33 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
-    return {};
+    return {
+      items: [['/subscribe', 'Subscribe'], ['/subscribers', 'Our Subscribers']]
+    };
   },
   methods: {},
   mounted: function mounted() {}
@@ -28968,7 +28992,65 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", [_vm._v("\nworks\n")])
+  return _c(
+    "v-card",
+    { staticClass: "mx-auto", attrs: { height: "600", width: "900" } },
+    [
+      _c(
+        "v-navigation-drawer",
+        {
+          attrs: {
+            absolute: "",
+            dark: "",
+            src: "/images/home.png",
+            width: "100%",
+            permanent: ""
+          }
+        },
+        [
+          _c(
+            "v-list",
+            _vm._l(_vm.items, function(ref, i) {
+              var link = ref[0]
+              var text = ref[1]
+              return _c(
+                "v-list-item",
+                { key: i, attrs: { link: "" } },
+                [
+                  _c(
+                    "v-list-item-content",
+                    [
+                      _c("v-list-item-title", [
+                        _c(
+                          "b",
+                          [
+                            _c(
+                              "router-link",
+                              {
+                                staticClass: "text-style",
+                                attrs: { to: link }
+                              },
+                              [_vm._v(_vm._s(text))]
+                            )
+                          ],
+                          1
+                        )
+                      ])
+                    ],
+                    1
+                  )
+                ],
+                1
+              )
+            }),
+            1
+          )
+        ],
+        1
+      )
+    ],
+    1
+  )
 }
 var staticRenderFns = []
 render._withStripped = true
