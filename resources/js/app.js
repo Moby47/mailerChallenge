@@ -11,8 +11,11 @@ window.Vue = require('vue');
 
 /* ------------------------- Imports -------------------- */
 
-//vee validate
 import Vue from 'vue';
+
+//vee validate
+import VeeValidate from 'vee-validate';
+Vue.use(VeeValidate);
 
 //vue router
 import router from './router'
@@ -25,6 +28,7 @@ Vue.use(Vuetify)
 //vue meta
 import Meta from 'vue-meta'
 Vue.use(Meta)
+
 /* ------------------------- Imports -------------------- */
 
 
