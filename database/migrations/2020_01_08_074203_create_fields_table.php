@@ -15,6 +15,7 @@ class CreateFieldsTable extends Migration
     {
         Schema::create('fields', function (Blueprint $table) {
             $table->bigIncrements('id');
+            $table->integer('subscribers_id');
             $table->string('title');
             $table->string('type');
             $table->timestamps();
