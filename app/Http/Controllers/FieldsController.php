@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Fields;
+use App\Http\Resources\FieldsResource as FieldRes;
 use Illuminate\Http\Request;
 
 class FieldsController extends Controller
@@ -34,7 +36,26 @@ class FieldsController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        // Validate the requests...
+        $validatedData = $request->validate([
+            'title' => 'required|string|max:255',
+            'type' => 'required|string|max:255',
+        ]);
+
+        // get requests...
+        $title = $request->input('title');
+        $type = $request->input('type');
+        $subscribers_id = $request->input('subscribers_id');
+
+        $save = new Fields;
+
+        $save->title = $title;
+        $save->type = $type;
+        $save->subscribers_id = $subscribers_id;
+
+        $save->save();
+
+        return 1;
     }
 
     /**
