@@ -69,6 +69,21 @@
 
         export default {
         
+          //meta
+metaInfo: {
+       charset: 'utf-8' ,
+       name: 'viewport', content: 'width=device-width, initial-scale=1',
+      title: 'Subscribe to Mailer Challenge',
+         meta: [{
+           'name': 'description',
+        'content': 'A simple web app built with laravel + vue to show a bit of my skills',
+      }],
+      noscript: [
+      { innerHTML: 'JavaScript is required.' }
+    ]
+    },
+  //meta
+
         data: () => ({
             name: '',
       email: '',
