@@ -7,3 +7,14 @@
     position:absolute;left:27%;top:40%;z-index:1;padding-left:123px;color:rgb(8, 7, 7);
     width:180px;height:180px;margin:-75px 0 0 -75px;width:290px;height:210px;font-weight: bolder;
     font-family:Georgia,'Times New Roman',Times,serif}
+
+#nprogress .bar{
+ height:6px!important;
+ background:#28a745!important;
+ border:#28a745!important
+}
+
+#nprogress .spinner-icon{
+border-top-color:#28a745!important;
+border-left-color:white!important
+}

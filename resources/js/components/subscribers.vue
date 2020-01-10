@@ -27,47 +27,41 @@
                             <v-container>
                             <v-row dense>
 
-                              <v-col cols="6">
+                              <v-col cols="6" v-for='sub in subscribers' v-bind:key='sub.id'>
                                 <v-card
                                   color="#6c757d"
                                   dark
                                 >
-                              <v-card-title class="headline">First name surname</v-card-title>
+                              <v-card-title class="headline">{{sub.name}}</v-card-title>
                       
-                               <v-card-subtitle>email@gmail.com</v-card-subtitle>
-                               <v-card-subtitle>State</v-card-subtitle>
+                               <v-card-subtitle>{{sub.email}}</v-card-subtitle>
+                               <v-card-subtitle>{{sub.state}}</v-card-subtitle>
                       
                                   <v-card-actions>
-                                   <b-button  variant="success"><router-link to='/fields' class='text-style'>My Fields</router-link></b-button>
+                                   <b-button  variant="success"><router-link :to="'/fields/'+sub.id" class='text-style'>My Fields</router-link></b-button>
                                   </v-card-actions>
                                 </v-card>
                               </v-col>
                       
-
-                              <v-col cols="6">
-                                    <v-card
-                                      color="#385F73"
-                                      dark
-                                    >
-                                  <v-card-title class="headline">First name surname</v-card-title>
-                          
-                                   <v-card-subtitle>email@gmail.com</v-card-subtitle>
-                                   <v-card-subtitle>State</v-card-subtitle>
-                          
-                                      <v-card-actions>
-                                        <v-btn >My Fields</v-btn>
-                                      </v-card-actions>
-                                    </v-card>
-                                  </v-col>
                                 
                                 </v-row>
                           </v-container>
                            <div class='text-center mt-4 mb-2'>
-                                <b-button pill variant="outline-success m-3">PREV</b-button>
-                                <b-button pill variant="outline-success m-3">NEXT</b-button>
+                           <b-button pill variant="outline-success m-3" @click.prevent="getSubscribers(pagination.prev_page_url)" :disabled="!pagination.prev_page_url">PREV</b-button>
+                          <span>{{pagination.current_page}} of {{pagination.last_page}}</span>
+                           <b-button pill variant="outline-success m-3" @click.prevent="getSubscribers(pagination.next_page_url)" :disabled="!pagination.next_page_url">NEXT</b-button>
                               </div>
 
                       </template>
+
+                       <!-- loader-->
+                      <template>
+                    <div class="text-center">
+                      <v-overlay :value="overlay">
+                        <v-progress-circular indeterminate size="54"></v-progress-circular>
+                      </v-overlay>
+                    </div>
+                  </template>
 
                       </v-card>
                   </template>
@@ -92,16 +86,66 @@ metaInfo: {
     },
  
  data: () => ({
-     
+     subscribers: [],
+     pagination:[],
+     overlay: false
         }),
           
  methods: {
         
-                
+    getSubscribers(page_url){
+         if(page_url)
+         {
+        NProgress.start();
+         }else{
+      this.overlay = !this.overlay
+        }
+
+      var   page_url = page_url || '/api/subscribers';
+     
+     fetch(page_url)
+    .then(res => res.json())
+    .then(res=>{
+
+    this.subscribers = res.data;
+    this.overlay = false
+
+     if(res.data[0] == undefined)
+     {
+     alert('No subscribers found...') 
+    }else{
+
+    }
+
+    this.makePagination(res.meta, res.links);
+
+    NProgress.done();
+                })
+   .catch(error =>{
+   console.log(error)
+   this.overlay = false
+    NProgress.done();   
+   })
+
+  },
+
+      
+
+   makePagination(meta, links){
+   var pagination = {
+      current_page: meta.current_page,
+      last_page: meta.last_page,
+      next_page_url: links.next,
+      prev_page_url: links.prev
+     }
+
+    this.pagination = pagination;
+    }
+    
   },
         
  mounted() {
-        
+    this.getSubscribers()    
  }
         
   }

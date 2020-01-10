@@ -18,7 +18,7 @@ class SubscribersController extends Controller
         //View all subscribers
         $subscribers = Subscribers::orderBy('id','desc')
                                    ->select('id','name','email','state','created_at')
-                                   ->get();
+                                   ->paginate(8);
 
         return SubscriberRes::collection($subscribers);
     }

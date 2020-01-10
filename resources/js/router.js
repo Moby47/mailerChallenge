@@ -38,7 +38,7 @@ export default new Router({
             }
         },
         {
-            path: '/fields',
+            path: '/fields/:id',
             name: 'fields',
             component: fields,
              meta:{
