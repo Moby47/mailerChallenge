@@ -1,7 +1,7 @@
             <template>
              <v-card
              class="mx-auto"
-             height="600"
+             height="700"
              width="900"
              >       
             <div>
@@ -53,6 +53,12 @@
                 </tbody>
                 </table>
                       </div>
+                        <div class='text-center mt-4 mb-2'>
+                           <b-button pill variant="outline-success m-3" @click.prevent="getFields(pagination.prev_page_url)" :disabled="!pagination.prev_page_url">PREV</b-button>
+                          <span>{{pagination.current_page}} of {{pagination.last_page}}</span>
+                           <b-button pill variant="outline-success m-3" @click.prevent="getFields(pagination.next_page_url)" :disabled="!pagination.next_page_url">NEXT</b-button>
+                              </div>
+
                       </template>
 
                    <!--modal-->
