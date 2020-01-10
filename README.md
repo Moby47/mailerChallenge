@@ -11,7 +11,7 @@
 
 ## DOCUMENTATION
 
-<p>Click here for live project<a href='mailerchallenge.henrymoby.tech'>Demo</a> </p>
+<p>Click here for live project <a href='https://www.mailerchallenge.henrymoby.tech'><b>Demo</b></a> </p>
 
 ## Installation 
 
@@ -51,11 +51,23 @@
 
 - Fields resource
 
-<p>API testing tool</p>
+<p>API testing tools</p>
 
 - Postman. https://www.getpostman.com/downloads/
 
-- PHP Unit
+- PHP Unit. using the command <i>./vendor/bin/phpunit</i> in the project directory
+
+<div class='jumbotron'>
+PS C:\xampp\htdocs\MailerChallenge> ./vendor/bin/phpunit
+PHPUnit 8.5.1 by Sebastian Bergmann and contributors.
+
+.......                                                             7 / 7 (100%)
+
+Time: 1.48 seconds, Memory: 26.00 MB
+
+OK (7 tests, 23 assertions)
+PS C:\xampp\htdocs\MailerChallenge>
+</div>
 
 ## Frontend
 
