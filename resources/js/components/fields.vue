@@ -57,24 +57,28 @@
 
                    <!--modal-->
                 <b-modal id="modal-center"  title="Create New Field" hide-footer>
-                    <v-form
+                                       <v-form
                                         class='m-4'
-                                        >
+                                         >
                                         <v-text-field
                                             v-model="title"
-                                            :counter="10"
+                                            :counter="50"
                                             label="Title"
                                             name='title'
+                                            v-validate='"required|max:50"'
                                         ></v-text-field>
+                                        <p class='text-danger' v-show="errors.has('title')">{{ errors.first('title') }}</p>
                                     
                                         <v-text-field
                                             v-model="type"
-                                            :counter="10"
+                                            :counter="50"
                                             label="Type"
                                             name='type'
+                                            v-validate='"required|max:50"'
                                         ></v-text-field>
+                                        <p class='text-danger' v-show="errors.has('type')">{{ errors.first('type') }}</p>
                                     
-                                        <b-button variant="success" ><router-link to='/subscribe' class='text-style'>Subscribe</router-link></b-button>
+                                        <b-button variant="success" @click.prevent='createField()'>Create</b-button>
                                     
                                         
                                         </v-form>
@@ -217,6 +221,38 @@ methods: {
             console.log(error)
           })
       }
+    },
+
+      createField(){
+       //validate then proceed
+      this.$validator.validateAll().then(() => {
+     if (!this.errors.any()) 
+     {
+       this.overlay = true
+       var input = {'type':this.type,'title':this.title,'subscribers_id':this.userId}
+
+       axios.post('/api/fields',input)
+          .then(res=>{
+            if(res.data == 1)
+            {
+              this.$bvModal.hide('modal-center')
+              this.overlay = false
+              this.text = 'Field created successfully!'
+              this.snackbar = true
+              this.getFields()
+            }else{
+              this.$bvModal.hide('modal-center')
+              alert('Error. Please try again.')
+              this.overlay = false
+            }
+          })
+          .catch(error=>{
+            this.$bvModal.hide('modal-center')
+            this.overlay = false
+            console.log(error)
+          })
+     }
+      })
     }
                 
 },

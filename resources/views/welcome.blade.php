@@ -11,7 +11,7 @@
 <!-- CSRF Token -->
 <meta name="csrf-token" content="{{ csrf_token() }}">   
 <!--Fav icon -->
-<link rel="icon" href="https://www.mailerlite.com/site/themes/new/img/favicons/favicon-16x16.png">
+<link rel="icon" href="/images/favicon-16x16.png">
 <!--Vuetify material icons-->
 <link href='https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons' rel="stylesheet">
 <!--nprogress-css-->
