@@ -47,8 +47,8 @@
                     <tr v-for='fil in fieldsData' v-bind:key='fil.id'>
                     <td>{{fil.title}}</td>
                     <td>{{fil.type}}</td>
-                    <td> <b-button variant="primary m-3" @click.prevent='comingSoon()'>Edit</b-button></td>
-                    <td><b-button variant="danger m-3" @click.prevent='remove(fil.id)'>Delete</b-button></td>
+                    <td> <b-button variant="outline-primary m-3" @click.prevent='comingSoon()'>Edit</b-button></td>
+                    <td><b-button variant="outline-danger m-3" @click.prevent='remove(fil.id)'>Delete</b-button></td>
                     </tr>
                 </tbody>
                 </table>
