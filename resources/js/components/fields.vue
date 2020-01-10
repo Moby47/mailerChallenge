@@ -69,11 +69,31 @@
 
                       
 <b-modal id="modal-center"  title="Create New Field" hide-footer>
-     <b-form-input placeholder="Enter Title"></b-form-input>
-     <br>
-      <b-form-input placeholder="Enter type"></b-form-input>
-      <br>
-      <b-button variant="outline-primary m-3" v-b-modal.modal-center>New Field</b-button>
+      <v-form
+                        class='m-4'
+                        >
+                          <v-text-field
+                            v-model="name"
+                            :counter="10"
+                            label="Name"
+                            name='name'
+                          ></v-text-field>
+                      
+                          <v-text-field
+                            v-model="email"
+                            label="E-mail"
+                            name='email'
+                          ></v-text-field>
+                      
+                          <v-btn
+                            color="success"
+                            class="mr-4 mb-3"
+                          >
+                            Subscribe
+                          </v-btn>
+                      
+                          
+                        </v-form>
   </b-modal>
 
     </v-card>

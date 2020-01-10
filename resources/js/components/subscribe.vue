@@ -30,7 +30,7 @@
                         width="300"
                       >
                         <v-form
-                        class='mt-4'
+                        class='m-4'
                         >
                           <v-text-field
                             v-model="name"
