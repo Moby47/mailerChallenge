@@ -6,6 +6,7 @@ Vue.use(Router)
 import index from './components/index.vue'
 import subscribers from './components/subscribers.vue'
 import subscribe from './components/subscribe.vue'
+import fields from './components/fields.vue'
 import notfound from './components/notfound.vue'
 
 
@@ -32,6 +33,14 @@ export default new Router({
             path: '/subscribe',
             name: 'subscribe',
             component: subscribe,
+             meta:{
+              //  auth: true
+            }
+        },
+        {
+            path: '/fields',
+            name: 'fields',
+            component: fields,
              meta:{
               //  auth: true
             }
