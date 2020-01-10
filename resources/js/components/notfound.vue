@@ -16,7 +16,7 @@
                       
                           <hr class="my-4">
                       
-                          <b-button variant="primary" ><router-link to='/' class='text-style'>Go Home</router-link></b-button>
+                          <b-button variant="success" ><router-link to='/' class='text-style'>Go Home</router-link></b-button>
                         </b-jumbotron>
                       </div>
     

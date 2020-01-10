@@ -15,7 +15,7 @@
                           </b-collapse>
                       <b-collapse id="nav-text-collapse" is-nav>
                         <b-navbar-nav>
-                          <b-nav-text><router-link to='/subscribers'>Subscribers</router-link></b-nav-text>
+                          <b-nav-text><router-link to='/subscribers'>Our Subscribers</router-link></b-nav-text>
                         </b-navbar-nav>
                       </b-collapse>
                     </b-navbar>
@@ -45,12 +45,7 @@
                             name='email'
                           ></v-text-field>
                       
-                          <v-btn
-                            color="success"
-                            class="mr-4 mb-3"
-                          >
-                            Subscribe
-                          </v-btn>
+                          <b-button variant="success" ><router-link to='/subscribe' class='text-style'>Subscribe</router-link></b-button>
                       
                           
                         </v-form>

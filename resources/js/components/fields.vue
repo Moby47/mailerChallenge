@@ -19,7 +19,7 @@
                           </b-collapse>
                       <b-collapse id="nav-text-collapse" is-nav>
                         <b-navbar-nav>
-                          <b-nav-text><router-link to='/subscribers'>All Subscribers</router-link></b-nav-text>
+                          <b-nav-text><router-link to='/subscribers'>Our Subscribers</router-link></b-nav-text>
                         </b-navbar-nav>
                       </b-collapse>
                     </b-navbar>
@@ -28,7 +28,7 @@
                 <br>
                 <template>
                 <div>
-                <b-button variant="outline-primary m-3" v-b-modal.modal-center>New Field</b-button>
+                <b-button variant="outline-success m-3" v-b-modal.modal-center>New Field</b-button>
                 </div>
                 </template>
 
@@ -47,20 +47,20 @@
                     <tr>
                     <td>Mark</td>
                     <td>Otto</td>
-                    <td><button class='btn btn-primary'>Edit</button></td>
-                    <td><button class='btn btn-danger'>Delete</button></td>
+                    <td> <b-button variant="primary m-3">Edit</b-button></td>
+                    <td><b-button variant="danger m-3">Delete</b-button></td>
                     </tr>
                     <tr>
                     <td>Jacob</td>
                     <td>Thornton</td>
-                    <td><button class='btn btn-primary'>Edit</button></td>
-                    <td><button class='btn btn-danger'>Delete</button></td>
+                    <td><b-button variant="primary m-3">Edit</b-button></td>
+                    <td><b-button variant="danger m-3">Delete</b-button></td>
                     </tr>
                     <tr>
                     <td>Larry</td>
                     <td>the Bird</td>
-                    <td><button class='btn btn-primary'>Edit</button></td>
-                    <td><button class='btn btn-danger'>Delete</button></td>
+                    <td><b-button variant="primary m-3">Edit</b-button></td>
+                    <td><b-button variant="danger m-3">Delete</b-button></td>
                     </tr>
                 </tbody>
                 </table>
@@ -73,24 +73,19 @@
                                         class='m-4'
                                         >
                                         <v-text-field
-                                            v-model="name"
+                                            v-model="title"
                                             :counter="10"
-                                            label="Name"
-                                            name='name'
+                                            label="Title"
+                                            name='title'
                                         ></v-text-field>
                                     
                                         <v-text-field
-                                            v-model="email"
-                                            label="E-mail"
-                                            name='email'
+                                            v-model="type"
+                                            label="Type"
+                                            name='type'
                                         ></v-text-field>
                                     
-                                        <v-btn
-                                            color="success"
-                                            class="mr-4 mb-3"
-                                        >
-                                            Subscribe
-                                        </v-btn>
+                                        <b-button variant="success" ><router-link to='/subscribe' class='text-style'>Subscribe</router-link></b-button>
                                     
                                         
                                         </v-form>
@@ -119,7 +114,8 @@ metaInfo: {
     },
  
 data: () => ({
-             
+  title:'',
+  type:''
 }),
           
 methods: {

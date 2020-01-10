@@ -23,15 +23,13 @@
 
 
                   <template>
-                        <v-card >
+                       
                             <v-container>
                             <v-row dense>
 
-
-
                               <v-col cols="6">
                                 <v-card
-                                  color="#385F73"
+                                  color="#6c757d"
                                   dark
                                 >
                               <v-card-title class="headline">First name surname</v-card-title>
@@ -39,13 +37,12 @@
                                <v-card-subtitle>email@gmail.com</v-card-subtitle>
                                <v-card-subtitle>State</v-card-subtitle>
                       
-                                  <v-card-actions><router-link to='/fields' class='text-style'>
-                                    <v-btn >My Fields</v-btn></router-link>
+                                  <v-card-actions>
+                                   <b-button  variant="success"><router-link to='/fields' class='text-style'>My Fields</router-link></b-button>
                                   </v-card-actions>
                                 </v-card>
                               </v-col>
                       
-
 
                               <v-col cols="6">
                                     <v-card
@@ -63,38 +60,14 @@
                                     </v-card>
                                   </v-col>
                                 
-
-                                  <v-col cols="6">
-                                        <v-card
-                                          color="#385F73"
-                                          dark
-                                        >
-                                      <v-card-title class="headline">First name surname</v-card-title>
-                              
-                                       <v-card-subtitle>email@gmail.com</v-card-subtitle>
-                                       <v-card-subtitle>State</v-card-subtitle>
-                              
-                                          <v-card-actions>
-                                            <v-btn >My Fields</v-btn>
-                                          </v-card-actions>
-                                        </v-card>
-                                      </v-col>
-
-
                                 </v-row>
                           </v-container>
-                        </v-card>
-
-
-                        <div class='text-center mt-4 mb-2'>
-                                <b-button pill variant="outline-secondary">PREV</b-button>
-                                <b-button pill variant="outline-secondary">NEXT</b-button>
+                           <div class='text-center mt-4 mb-2'>
+                                <b-button pill variant="outline-success m-3">PREV</b-button>
+                                <b-button pill variant="outline-success m-3">NEXT</b-button>
                               </div>
 
-
                       </template>
-
-
 
                       </v-card>
                   </template>

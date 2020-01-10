@@ -16,7 +16,7 @@
 
                   <b-collapse id="nav-text-collapse" is-nav>
                       <b-navbar-nav>
-                        <b-nav-text><router-link to='/subscribers'>All Subscribers</router-link></b-nav-text>
+                        <b-nav-text><router-link to='/subscribers'>Our Subscribers</router-link></b-nav-text>
                       </b-navbar-nav>
                     </b-collapse>
                 </b-navbar>
