@@ -8,20 +8,6 @@ use Illuminate\Http\Request;
 
 class FieldsController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function index()
-    {
-        /*//View all Fields
-        $Fields = Fields::orderBy('id','desc')
-                                   ->select('id','title','type','subscribers_id','created_at')
-                                   ->get();
-
-        return FieldRes::collection($Fields);*/
-    }
 
     /**
      * Show a subscriber's field(s).
@@ -70,27 +56,6 @@ class FieldsController extends Controller
         return 1;
     }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function show($id)
-    {
-        //
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function edit($id)
-    {
-        //
-    }
 
     /**
      * Update the specified resource in storage.

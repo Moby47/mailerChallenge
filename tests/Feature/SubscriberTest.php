@@ -24,8 +24,8 @@ class ApisTest extends TestCase
 
     public function test_can_create_subscriber() {
         $data = [
-        'name' =>  'henry',
-        'email' => 'henryonddffdsyem@gmail.com',
+        'name' =>  'henry Onyemaobi',
+        'email' => 'henryonyemaobi@gmail.com',
         'state' => 'active'
         ];
         
@@ -43,6 +43,7 @@ class ApisTest extends TestCase
             return $subscribers->only(['id','name','email','state']);
         });
         $this->get(route('subscribers.index'))
+            ->assertSuccessful()
             ->assertStatus(200)
             ->assertJsonStructure([
                 'data'=> ['*' => [ 'id','name','email','state']],
