@@ -15,22 +15,29 @@ class FieldsController extends Controller
      */
     public function index()
     {
-        //View all Fields
+        /*//View all Fields
         $Fields = Fields::orderBy('id','desc')
                                    ->select('id','title','type','subscribers_id','created_at')
                                    ->get();
 
-        return FieldRes::collection($Fields);
+        return FieldRes::collection($Fields);*/
     }
 
     /**
-     * Show the form for creating a new resource.
+     * Show a subscriber's field(s).
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function subscriberfield($id)
     {
-        //
+        //View all Fields for a subscriber
+        $Fields = Fields::orderBy('id','desc')
+                                   ->select('id','title','type','subscribers_id')
+                                   ->where('subscribers_id','=', $id)
+                                   
+                                   ->paginate(5);
+
+        return FieldRes::collection($Fields);
     }
 
     /**

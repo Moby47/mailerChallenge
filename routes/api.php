@@ -24,3 +24,5 @@ Route::apiResource('/fields', 'FieldsController');
 Route::post('/update-field', 'FieldsController@updateField');
 //custom api route to destroy field
 Route::post('/destroy-field', 'FieldsController@destroyField');
+//custom api route to get a subscriber's fields
+Route::get('/subscriber-fields/{id}', 'FieldsController@subscriberfield');
