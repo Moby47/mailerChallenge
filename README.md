@@ -11,7 +11,7 @@
 
 ## DOCUMENTATION
 
-<p>Click here for live project <a href='https://www.mailerchallenge.henrymoby.tech'><b>Demo</b></a>  ( https://www.mailerchallenge.henrymoby.tech )/</p>
+<p>Click here for live project <a href='https://www.mailerchallenge.henrymoby.tech'><b>Demo</b></a>  ( https://www.mailerchallenge.henrymoby.tech )</p>
 
 ## Installation 
 
