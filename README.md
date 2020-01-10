@@ -57,17 +57,17 @@
 
 - PHP Unit. using the command <i>./vendor/bin/phpunit</i> in the project directory
 
-<div class='jumbotron'>
+<p>
 PS C:\xampp\htdocs\MailerChallenge> ./vendor/bin/phpunit
 PHPUnit 8.5.1 by Sebastian Bergmann and contributors.
-
+<br>
 .......                                                             7 / 7 (100%)
-
+<br>
 Time: 1.48 seconds, Memory: 26.00 MB
-
+</br>
 OK (7 tests, 23 assertions)
 PS C:\xampp\htdocs\MailerChallenge>
-</div>
+</p>
 
 ## Frontend
 
