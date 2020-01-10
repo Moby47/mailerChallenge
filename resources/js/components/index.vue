@@ -29,7 +29,7 @@
                     <b-carousel
                       id="carousel-1"
                       v-model="slide"
-                      :interval="2000"
+                      :interval="2500"
                       controls
                       indicators
                       background="#ababab"
@@ -43,19 +43,19 @@
                       <!-- Text slides with image -->
                       <b-carousel-slide
                         text="Supercharge your email marketing today."
-                        img-src="/images/home.png"
+                        img-src="https://www.mailerlite.com/img/containers/main/blog/updating-passwords-regulary.jpg/a9929b0147e2166a96708beacd9e87a2.jpg"
                       ></b-carousel-slide>
                 
                       <!-- Text slides with image -->
                       <b-carousel-slide
                         text="Supercharge your email marketing today."
-                        img-src="/images/home.png"
+                        img-src="https://www.mailerlite.com/img/containers/main/blog/hero-1540311120.jpg/90dab387258083eb894d82c4ba40d09a.jpg"
                       ></b-carousel-slide>
                 
                       <!-- Text slides with image -->
                       <b-carousel-slide
                         text="Supercharge your email marketing today."
-                        img-src="/images/home.png"
+                        img-src="https://www.mailerlite.com/img/containers/main/blog/blog-nps-final.jpg/0ca476054371e8b274501aceb9d73c25.jpg"
                       ></b-carousel-slide>
 
                     </b-carousel>
@@ -74,11 +74,11 @@
                       <hr class="my-4">
                   
                       <p>
-                          Join our happy subscriberss worldwide.
+                          Join our happy subscribers worldwide.
                       </p>
                   
-                      <b-button variant="primary" ><router-link to='/subscribe' class='text-style'>Join Now</router-link></b-button>
-                      <b-button variant="success" ><router-link to='/subscribers' class='text-style'>Our Subscribers</router-link></b-button>
+                      <b-button variant="success" ><router-link to='/subscribe' class='text-style'>Join Now</router-link></b-button>
+                      <b-button  ><router-link to='/subscribers' class='text-style'>Our Subscribers</router-link></b-button>
                     </b-jumbotron>
                   </div>
 
