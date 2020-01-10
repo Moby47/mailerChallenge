@@ -55,6 +55,25 @@
 
 - Postman. https://www.getpostman.com/downloads/
 
+- PHP Unit
+
+## Frontend
+
+<p>Vue Js</p>
+<p>Packages:</p>
+
+- vuetify. https://vuetifyjs.com/
+
+- Vue-router. https://router.vuejs.org/
+
+- Axios. https://github.com/axios/axios
+
+- vue-meta. https://github.com/nuxt/vue-meta 
+
+- Bootstrap vue. https://bootstrap-vue.js.org/docs/
+
+- Vee validate. https://www.npmjs.com/package/vee-validate
+
 <hr>
 
 
