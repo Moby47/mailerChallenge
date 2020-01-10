@@ -30,7 +30,7 @@
 - Change database name in your .env file to mailerDb
 - Run <i>php artisan config:clear</i> in your project directory, to clear config cache 
 - Run <i>php artisan migrate</i> in your project directory, to migrate database 
-- Run <i>php artisan db:seed --class=SubscribersTableSeeder</i> in your project directory, to create demo data <a href='https://laravel.com/docs/master/seeding'>Full documentation</a>using seeder and factory <a href='https://laravel-news.com/learn-to-use-model-factories-in-laravel-5-1'>Full documentation</a>
+- Run <i>php artisan db:seed --class=SubscribersTableSeeder</i> in your project directory, to create demo data <a href='https://laravel.com/docs/master/seeding'>Full documentation</a> using seeder and factory <a href='https://laravel-news.com/learn-to-use-model-factories-in-laravel-5-1'>Full documentation</a>
 - Run <i>php artisan serve</i> in your project directory, to start development on localhost:8000
 
 ## Backend
