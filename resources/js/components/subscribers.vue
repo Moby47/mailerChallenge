@@ -39,8 +39,8 @@
                                <v-card-subtitle>email@gmail.com</v-card-subtitle>
                                <v-card-subtitle>State</v-card-subtitle>
                       
-                                  <v-card-actions>
-                                    <v-btn >My Fields</v-btn>
+                                  <v-card-actions><router-link to='/fields' class='text-style'>
+                                    <v-btn >My Fields</v-btn></router-link>
                                   </v-card-actions>
                                 </v-card>
                               </v-col>
@@ -109,15 +109,6 @@
 
 
                       </template>
-
-                      <v-footer padless>
-                            <v-col
-                              class="text-center"
-                              cols="12"
-                            >
-                              {{ new Date().getFullYear() }} — <strong>Henry Onyemaobi</strong>
-                            </v-col>
-                          </v-footer>
 
 
 
