@@ -1,10 +1,10 @@
-<template>
-    <v-card
-      class="mx-auto"
-      height="600"
-      width="900"
-    >
-        <div>
+                <template>
+                <v-card
+                  class="mx-auto"
+                  height="600"
+                  width="900"
+                  >
+                    <div>
                 <b-navbar toggleable="sm" type="light" variant="light">
                   <b-navbar-toggle target="nav-text-collapse"></b-navbar-toggle>
                  
@@ -20,7 +20,7 @@
                       </b-navbar-nav>
                     </b-collapse>
                 </b-navbar>
-              </div>
+              </div>    
 
 
 
@@ -39,6 +39,7 @@
                       @sliding-start="onSlideStart"
                       @sliding-end="onSlideEnd"
                     >
+
                       <!-- Text slides with image -->
                       <b-carousel-slide
                         text="Supercharge your email marketing today."
@@ -91,20 +92,21 @@
                           {{ new Date().getFullYear() }} — <strong>Henry Onyemaobi</strong>
                         </v-col>
                       </v-footer>
-</v-card>
-</template>
+
+                  </v-card>
+                  </template>
 
 
 
 <script>
 
-    export default {
+export default {
 //meta
 metaInfo: {
        charset: 'utf-8' ,
        name: 'viewport', content: 'width=device-width, initial-scale=1',
-      title: 'Mailer Challenge Home page',
-         meta: [{
+       title: 'Mailer Challenge Home page',
+       meta: [{
            'name': 'description',
         'content': 'A simple web app built with laravel + vue to show a bit of my skills',
       }],
@@ -112,25 +114,24 @@ metaInfo: {
       { innerHTML: 'JavaScript is required.' }
     ]
     },
-  //meta
-    data: () => ({
+
+data: () => ({
       slide: 0,
-        sliding: null
+      sliding: null
     }),
       
-    methods: {
+ methods: {
       onSlideStart(slide) {
         this.sliding = true
       },
       onSlideEnd(slide) {
         this.sliding = false
-      }
-            
-    },
+      }   
+},
     
-    mounted() {
+mounted() {
     
-    }
+ }
     
-    }
+ }
     </script>

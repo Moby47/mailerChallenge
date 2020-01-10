@@ -1,11 +1,11 @@
-<template>
-        <v-card
-          class="mx-auto"
-          height="600"
-          width="900"
-        >
+                  <template>
+                          <v-card
+                            class="mx-auto"
+                            height="600"
+                            width="900"
+                          >
         
-            <div>
+                 <div>
                     <b-navbar toggleable="sm" type="light" variant="light">
                       <b-navbar-toggle target="nav-text-collapse"></b-navbar-toggle>
                       <b-collapse id="nav-text-collapse" is-nav>
@@ -60,21 +60,21 @@
                       
 
 
-    </v-card>
-</template>
+                    </v-card>
+                </template>
 
 
 
 <script>
 
-        export default {
+  export default {
         
-          //meta
+  //meta
 metaInfo: {
-       charset: 'utf-8' ,
-       name: 'viewport', content: 'width=device-width, initial-scale=1',
-      title: 'Subscribe to Mailer Challenge',
-         meta: [{
+     charset: 'utf-8' ,
+     name: 'viewport', content: 'width=device-width, initial-scale=1',
+     title: 'Subscribe to Mailer Challenge',
+     meta: [{
            'name': 'description',
         'content': 'A simple web app built with laravel + vue to show a bit of my skills',
       }],
@@ -82,21 +82,20 @@ metaInfo: {
       { innerHTML: 'JavaScript is required.' }
     ]
     },
-  //meta
 
-        data: () => ({
-            name: '',
-      email: '',
-        }),
+data: () => ({
+   name: '',
+   email: '',
+   }),
           
-        methods: {
+methods: {
         
                 
-        },
+},
         
-        mounted() {
+mounted() {
         
-        }
+}
         
-        }
+}
         </script>

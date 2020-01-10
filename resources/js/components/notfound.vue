@@ -1,9 +1,9 @@
-<template>
-        <v-card
-          class="mx-auto"
-          height="600"
-          width="900"
-        >
+                <template>
+                    <v-card
+                      class="mx-auto"
+                      height="600"
+                      width="900"
+                    >
            
     
                     <div>
@@ -21,20 +21,18 @@
                       </div>
     
     
-                      
-                        
-    </v-card>
-    </template>
+                </v-card>
+                </template>
     
     
     
     <script>
     
-        export default {
-       //meta
+export default {
+  //meta
 metaInfo: {
-       charset: 'utf-8' ,
-       name: 'viewport', content: 'width=device-width, initial-scale=1',
+      charset: 'utf-8' ,
+      name: 'viewport', content: 'width=device-width, initial-scale=1',
       title: 'Page not found',
          meta: [{
            'name': 'description',
@@ -44,25 +42,19 @@ metaInfo: {
       { innerHTML: 'JavaScript is required.' }
     ]
     },
-  //meta 
-        data: () => ({
-          slide: 0,
-            sliding: null
+ 
+ data: () => ({
+  
         }),
           
-        methods: {
-          onSlideStart(slide) {
-            this.sliding = true
-          },
-          onSlideEnd(slide) {
-            this.sliding = false
-          }
+methods: {
+        
                 
-        },
+  },
         
-        mounted() {
+mounted() {
         
-        }
+  }
         
-        }
+ }
         </script>
