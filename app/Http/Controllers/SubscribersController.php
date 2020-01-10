@@ -45,19 +45,19 @@ class SubscribersController extends Controller
         $validatedData = $request->validate([
             'name' => 'required|string|max:255',
             'email' => 'required|string|email|max:255|unique:Subscribers',
-            'state' => 'required|string|max:12',
+            //'state' => 'required|string|max:12',
         ]);
 
         // get requests...
         $name = $request->input('name');
         $email = $request->input('email');
-        $state = $request->input('state');
+       // $state = $request->input('state');
 
         $save = new Subscribers;
 
         $save->name = $name;
         $save->email = $email;
-        $save->state = $state;
+        $save->state = 'active';
 
         $save->save();
 

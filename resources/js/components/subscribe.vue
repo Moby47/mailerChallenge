@@ -34,26 +34,50 @@
                         >
                           <v-text-field
                             v-model="name"
-                            :counter="10"
+                            :counter="15"
                             label="Name"
                             name='name'
+                            v-validate='"required|max:15"'
                           ></v-text-field>
+                           <p class='text-danger' v-show="errors.has('name')">{{ errors.first('name') }}</p>
                       
                           <v-text-field
                             v-model="email"
                             label="E-mail"
                             name='email'
+                            :counter="100"
+                            v-validate='"required|email|max:100"'
                           ></v-text-field>
-                      
-                          <b-button variant="success" ><router-link to='/subscribe' class='text-style'>Subscribe</router-link></b-button>
+                        <p class='text-danger' v-show="errors.has('email')">{{ errors.first('email') }}</p>
+
+                          <b-button variant="success" @click.prevent='subscribe()'>Subscribe</b-button>
                       
                           
                         </v-form>
                         </v-card>
                       </template>
 
-                      
+                      <!-- loader-->
+                      <template>
+                    <div class="text-center">
+                      <v-overlay :value="overlay">
+                        <v-progress-circular indeterminate size="54"></v-progress-circular>
+                      </v-overlay>
+                    </div>
+                  </template>
 
+                      <!--snackbar-->
+                      <template>
+                  <div class="text-center ma-2">
+                    <v-snackbar
+                      v-model="snackbar"
+                      :top="y === 'top'"
+                      :right="x === 'right'"
+                    >
+                      Subscribtion successful. Redirecting...
+                    </v-snackbar>
+                  </div>
+                </template>
 
                     </v-card>
                 </template>
@@ -81,11 +105,47 @@ metaInfo: {
 data: () => ({
    name: '',
    email: '',
+   overlay: false,
+   snackbar: false,
+   x: null,
+   y: 'top',
    }),
           
 methods: {
         
-                
+    subscribe(){
+       //validate then proceed
+      this.$validator.validateAll().then(() => {
+     if (!this.errors.any()) 
+     {
+       this.overlay = true
+       var input = {'name':this.name,'email':this.email}
+       axios.post('/api/subscribers',input)
+          .then(res=>{
+            if(res.data == 1)
+            {
+              this.overlay = false
+              this.snackbar = true
+              setTimeout(() => {
+                this.$router.push({name: "subscribers"});
+              }, 2000);
+              
+            }else{
+              alert('Error. Please try again.')
+            }
+          })
+          .catch(error=>{
+            this.overlay = false
+            console.log(error)
+            if(error.response.status == 422)
+            {
+            alert('Email already exists...')
+            }
+          })
+     }
+      })
+    }
+    
 },
         
 mounted() {
