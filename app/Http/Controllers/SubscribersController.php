@@ -17,20 +17,10 @@ class SubscribersController extends Controller
     {
         //View all subscribers
         $subscribers = Subscribers::orderBy('id','desc')
-                                   ->select('id','name','email','state','created_at')
+                                   ->select('id','name','email','state')
                                    ->paginate(8);
 
         return SubscriberRes::collection($subscribers);
-    }
-
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
-    {
-        //
     }
 
     /**
@@ -78,37 +68,5 @@ class SubscribersController extends Controller
         return new SubscriberRes($subscriber);
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function edit($id)
-    {
-        //
-    }
-
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function update(Request $request, $id)
-    {
-        //
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy($id)
-    {
-        //
-    }
+   
 }
